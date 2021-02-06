@@ -1,7 +1,7 @@
 package com.simplilearn.ReviewAnalyzer;
 
 @SpringBootApplication
-public class ReviewAnalyserApplication {
+public class ReviewAnalyzerApplication {
     public static double getWordCount(String review){
         	int count = 0;
 
@@ -12,7 +12,7 @@ public class ReviewAnalyserApplication {
    	 return count;
     }
     public static void main(String[] args) {
-   	 SpringApplication.run(ReviewAnalyserApplication.class, args);
+   	 SpringApplication.run(ReviewAnalyzerApplication.class, args);
     }
 
 }
