@@ -1,18 +1,15 @@
 package com.simplilearn.ReviewAnalyzer;
 
-@SpringBootApplication
-public class ReviewAnalyzerApplication {
-    public static double getWordCount(String review){
-        	int count = 0;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.springframework.boot.test.context.SpringBootTest;
 
-            	String string[] = review.toLowerCase().split("([,.\\s]+)");
-            	for(String s : string){
-   	 	count++;
-            	}
-   	 return count;
-    }
-    public static void main(String[] args) {
-   	 SpringApplication.run(ReviewAnalyzerApplication.class, args);
-    }
+@SpringBootTest
+class ReviewAnalyzerApplicationTests {
 
+    private ReviewAnalyzerApplication analyser = new ReviewAnalyzerApplication();
+    @Test	 
+    public void testWordCount() {     	 
+   	 assertEquals(7,analyser.getWordCount("Train to win in the digital economy"));	 
+    }
 }
